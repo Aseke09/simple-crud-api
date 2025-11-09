@@ -1,0 +1,27 @@
+{
+  "name": "simple-crud-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc -p .",
+    "test": "node --test --loader ts-node/esm --enable-source-maps \"src/**/*.test.ts\"",
+    "start:prod": "npm run build && node dist/server.js",
+    "start:dev:build": "tsc -w",
+    "start:dev": "nodemon --watch src --ext ts --signal SIGTERM --exec \"node --loader ts-node/esm --enable-source-maps src/server.ts\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "ts-node": {
+    "esm": true
+  },
+  "devDependencies": {
+    "@types/node": "^24.10.0",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.9.3"
+  }
+}
