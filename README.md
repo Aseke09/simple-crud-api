@@ -56,8 +56,8 @@ hobbies: string[]      # обязательное поле (может быть 
 Эндпоинты и статусы
 рекомендую использовать bash
 
-- curl -i http://localhost:4000/api/users
 - GET /api/users → 200 OK — список пользователей (может быть пустой массив).
+- curl -i http://localhost:4000/api/users
 
 
 - GET /api/users/{userId}
