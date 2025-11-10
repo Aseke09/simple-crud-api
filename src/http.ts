@@ -29,11 +29,9 @@ export function badRequest(res: ServerResponse, msg: string) {
 
 export function internalError(res: ServerResponse, err: unknown) {
   sendJson(res, 500, { message: "Internal Server Error" });
-  // eslint-disable-next-line no-console
   console.error(err);
 }
 
-// Чтение JSON-тела 
 export async function readJsonBody<T = unknown>(req: IncomingMessage): Promise<T> {
   const chunks: Buffer[] = [];
   for await (const chunk of req) {
